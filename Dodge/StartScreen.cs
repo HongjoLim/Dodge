@@ -26,14 +26,13 @@ namespace Dodge
         private const string LOGIN_SUCCESS_MESSAGE =
             "Welcome!";
 
-        private const string INSTRUCTION = 
+        private const string INSTRUCTION =
             "1. Move the player with 'UP', 'DOWN', 'LEFT', 'RIGHT' keys\n" +
             "2. To shoot the flash, press s button\n" +
             "3. To pause, press space bar\n" +
             "4. If the player gets to the fire, the player loses 1 health\n" +
             "5. If the flash hits the enemy, the enemy loses 5 health (20 health for enemy)\n" +
-            "6. If the player gets every 300 points, the level increases\n" +
-            "7. Loading game is NOT available yet!!";
+            "6. If the player gets every 300 points, the level increases\n";
 
         #endregion
 
