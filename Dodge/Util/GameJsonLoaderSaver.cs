@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Configuration;
 using System.IO;
+using Dodge.Data;
 using Newtonsoft.Json;
 
 namespace Dodge.Util
@@ -17,20 +18,13 @@ namespace Dodge.Util
         // Static class field to hold FileStream object
         private static FileStream fs;
         private static string file_path = ConfigurationManager.AppSettings["SavePath"];
-        public static void SaveGame(Game game, string fileName)
+        public static void SaveGame(GameData game, string fileName)
         {
             string s = JsonConvert.SerializeObject(game);
 
             try
             {
-                if (File.Exists(fileName))
-                {
-                    fs = new FileStream(fileName, FileMode.Append);
-                }
-                else
-                {
-                    fs = new FileStream(fileName, FileMode.Create);
-                }
+                fs = new FileStream(fileName, FileMode.Create);
 
                 using (StreamWriter sr = new StreamWriter(fs))
                 {
@@ -43,9 +37,8 @@ namespace Dodge.Util
             }
         }
 
-        // This loading method DOES NOT WORK. I think because when I save the file in a text file with Json format, 
-        // The file may not be appropriately flattened.
-        public static Game LoadGame(string fileName)
+        // This loading method returns GameData object(simplified version of Game class)
+        public static GameData LoadGame(string fileName)
         {
             string s="";
             try
@@ -55,8 +48,8 @@ namespace Dodge.Util
                 {
                     s = sr.ReadToEnd();
                 }
-                Game game = JsonConvert.DeserializeObject<Game>(s);
-                return game;
+                GameData gamedata = JsonConvert.DeserializeObject<GameData>(s);
+                return gamedata;
             }
             catch (Exception e)
             {

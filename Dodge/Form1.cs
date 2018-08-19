@@ -4,6 +4,7 @@ using System;
 using System.Drawing;
 using System.Windows.Forms;
 using Newtonsoft;
+using Dodge.GameObjects;
 
 namespace Dodge
 {
@@ -314,8 +315,17 @@ namespace Dodge
                 saveFileDialog1.ShowDialog();
             }
 
+            GameData gameData = new GameData()
+            {
+                User = this.user,
+                Player = this.Game.Player,
+                Score = this.Game.Score,
+                Level = this.Game.Level,
+                Terrains = this.Game.Terrains
+            };
+
             // Using custom class 'GameJsonLoaderSaver', save the file into a text file that contains JSON string
-            GameJsonLoaderSaver.SaveGame(this.Game, fileName);
+            GameJsonLoaderSaver.SaveGame(gameData, fileName);
 
             this.Game.State = Game.GAMESTATE_RUNNING;
             SetPause();

@@ -58,7 +58,7 @@ namespace Dodge
             if (result)
             {
                 MemberPanel.Visible = true;
-                this.Instruction.Text = INSTRUCTION;
+                this.InstructionText.Text = INSTRUCTION;
             }
             else
             {
@@ -116,8 +116,19 @@ namespace Dodge
             string fileName = openFileDialog1.FileName;
             try
             {
-                Game game = GameJsonLoaderSaver.LoadGame(fileName);
-                new Form1(game, new Util.KeyHandler(game), user).Show();
+                // Load the saved data and put the information into GameData object
+                GameData gamedata = GameJsonLoaderSaver.LoadGame(fileName);
+                // Initialize Game object
+                Game game = new Game()
+                {
+                    // Extracts essential data from GameData object puts it back into Game object
+                    Level = gamedata.Level,
+                    Player = gamedata.Player,
+                    Score = gamedata.Score,
+                    Terrains = gamedata.Terrains
+                };
+
+                new Form1(game, new Util.KeyHandler(game), gamedata.User).Show();
             }
             catch (Exception ex)
             {

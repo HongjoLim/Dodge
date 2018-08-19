@@ -36,10 +36,10 @@
             this.label3 = new System.Windows.Forms.Label();
             this.SignInBtn = new System.Windows.Forms.Button();
             this.SignUpBtn = new System.Windows.Forms.Button();
-            this.MemberPanel = new System.Windows.Forms.Panel();
-            this.Instruction = new System.Windows.Forms.Label();
-            this.NewBtn = new System.Windows.Forms.Button();
             this.LoadBtn = new System.Windows.Forms.Button();
+            this.NewBtn = new System.Windows.Forms.Button();
+            this.MemberPanel = new System.Windows.Forms.Panel();
+            this.InstructionText = new System.Windows.Forms.Label();
             this.MemberPanel.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -116,29 +116,16 @@
             this.SignUpBtn.UseVisualStyleBackColor = true;
             this.SignUpBtn.Click += new System.EventHandler(this.SignUpBtn_Click);
             // 
-            // MemberPanel
+            // LoadBtn
             // 
-            this.MemberPanel.Controls.Add(this.Instruction);
-            this.MemberPanel.Controls.Add(this.NewBtn);
-            this.MemberPanel.Controls.Add(this.LoadBtn);
-            this.MemberPanel.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.MemberPanel.Location = new System.Drawing.Point(0, 0);
-            this.MemberPanel.Name = "MemberPanel";
-            this.MemberPanel.Padding = new System.Windows.Forms.Padding(30);
-            this.MemberPanel.Size = new System.Drawing.Size(836, 450);
-            this.MemberPanel.TabIndex = 7;
-            this.MemberPanel.Visible = false;
-            // 
-            // Instruction
-            // 
-            this.Instruction.AutoSize = true;
-            this.Instruction.Dock = System.Windows.Forms.DockStyle.Top;
-            this.Instruction.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Instruction.Location = new System.Drawing.Point(30, 30);
-            this.Instruction.Name = "Instruction";
-            this.Instruction.Size = new System.Drawing.Size(60, 24);
-            this.Instruction.TabIndex = 3;
-            this.Instruction.Text = "label4";
+            this.LoadBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LoadBtn.Location = new System.Drawing.Point(185, 382);
+            this.LoadBtn.Name = "LoadBtn";
+            this.LoadBtn.Size = new System.Drawing.Size(187, 39);
+            this.LoadBtn.TabIndex = 0;
+            this.LoadBtn.Text = "LOAD";
+            this.LoadBtn.UseVisualStyleBackColor = true;
+            this.LoadBtn.Click += new System.EventHandler(this.LoadBtn_Click);
             // 
             // NewBtn
             // 
@@ -151,16 +138,27 @@
             this.NewBtn.UseVisualStyleBackColor = true;
             this.NewBtn.Click += new System.EventHandler(this.NewBtn_Click);
             // 
-            // LoadBtn
+            // MemberPanel
             // 
-            this.LoadBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.LoadBtn.Location = new System.Drawing.Point(185, 382);
-            this.LoadBtn.Name = "LoadBtn";
-            this.LoadBtn.Size = new System.Drawing.Size(187, 39);
-            this.LoadBtn.TabIndex = 0;
-            this.LoadBtn.Text = "LOAD";
-            this.LoadBtn.UseVisualStyleBackColor = true;
-            this.LoadBtn.Click += new System.EventHandler(this.LoadBtn_Click);
+            this.MemberPanel.Controls.Add(this.InstructionText);
+            this.MemberPanel.Controls.Add(this.NewBtn);
+            this.MemberPanel.Controls.Add(this.LoadBtn);
+            this.MemberPanel.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.MemberPanel.Location = new System.Drawing.Point(0, 0);
+            this.MemberPanel.Name = "MemberPanel";
+            this.MemberPanel.Padding = new System.Windows.Forms.Padding(30);
+            this.MemberPanel.Size = new System.Drawing.Size(836, 450);
+            this.MemberPanel.TabIndex = 7;
+            this.MemberPanel.Visible = false;
+            // 
+            // InstructionText
+            // 
+            this.InstructionText.AutoSize = true;
+            this.InstructionText.Location = new System.Drawing.Point(44, 34);
+            this.InstructionText.Name = "InstructionText";
+            this.InstructionText.Size = new System.Drawing.Size(46, 17);
+            this.InstructionText.TabIndex = 2;
+            this.InstructionText.Text = "label4";
             // 
             // StartScreen
             // 
@@ -194,9 +192,9 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Button SignInBtn;
         private System.Windows.Forms.Button SignUpBtn;
-        private System.Windows.Forms.Panel MemberPanel;
-        private System.Windows.Forms.Button NewBtn;
         private System.Windows.Forms.Button LoadBtn;
-        private System.Windows.Forms.Label Instruction;
+        private System.Windows.Forms.Button NewBtn;
+        private System.Windows.Forms.Panel MemberPanel;
+        private System.Windows.Forms.Label InstructionText;
     }
 }

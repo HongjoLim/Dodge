@@ -154,6 +154,5 @@ C:\Users\HONGJO\source\repos\Dodge\Dodge\bin\Debug\System.Runtime.CompilerServic
 C:\Users\HONGJO\source\repos\Dodge\Dodge\obj\Debug\Dodge.csproj.CopyComplete
 C:\Users\HONGJO\source\repos\Dodge\Dodge\obj\Debug\Dodge.exe
 C:\Users\HONGJO\source\repos\Dodge\Dodge\obj\Debug\Dodge.pdb
-C:\Users\HONGJO\source\repos\Dodge\Dodge\obj\Debug\Dodge.csprojAssemblyReference.cache
 C:\Users\HONGJO\source\repos\Dodge\Dodge\bin\Debug\Newtonsoft.Json.dll
 C:\Users\HONGJO\source\repos\Dodge\Dodge\bin\Debug\Newtonsoft.Json.xml

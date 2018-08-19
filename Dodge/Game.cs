@@ -44,7 +44,7 @@ namespace Dodge
         }
         public Player Player { get; set; }
         private List<GameObject> fires = new List<GameObject>();
-        public List<GameObject> Fires { get { return fires; } }
+        public List<GameObject> Fires { get { return fires; } set { fires = value; } }
 
         private List<GameObject> enemies = new List<GameObject>();
         public List<GameObject> Enemies { get { return this.enemies; } set { this.enemies = value; } }
@@ -61,7 +61,10 @@ namespace Dodge
         public void Start()
         {
             this.State = GAMESTATE_RUNNING;
-            StartGameEvent();
+            if (Enemies.Count < 1)
+            {
+                StartGameEvent();
+            }
         }
 
         // It just gets the instance of a Player object and assign it to the _player field
